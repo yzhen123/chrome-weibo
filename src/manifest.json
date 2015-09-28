@@ -1,13 +1,18 @@
 {
-	// 必须的字段
 	"name": "m-weibo",
-	"version": "1.2",
+	"version": "1.0",
 	"manifest_version": 2,
 	"permissions": [
-	"*://*/*"
+	"*://*/*","tabs","contextMenus"
 	],
-	// 建议提供的字段
-	"description": "一个提供定时提醒功能的谷歌浏览器插件",
+  "content_scripts": [
+    {
+      "matches": ["*://*.weibo.cn/*"],
+      "css": ["inject/inject.css"],
+      "js": ["inject/jquery.js","inject/inject.js"]
+    }
+  ],
+	"description": "基于微博移动web版的chrome微博插件",
 	"icons": {
 		"16": "img/icon-weibo.png",
 		"32": "img/icon-weibo.png",
@@ -18,7 +23,6 @@
 	},
 	"browser_action": {
 		"default_icon": "img/icon-weibo.png",
-		"default_title": "m-weibo",
-		"default_popup": "index.html"
+		"default_title": "m-weibo"
 	}
-}  
+}
