@@ -4,6 +4,8 @@
 
 ![截图](https://raw.githubusercontent.com/yzhen123/chrome-weibo/master/screenshoots/1.png)
 
+##features
+*   
 
 ## 安装方式:
 
